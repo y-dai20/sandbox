@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-tdd-jest",
+  "version": "1.0.0",
+  "description": "Node.js TDD sample project using Jest",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:verbose": "jest --verbose"
+  },
+  "keywords": ["tdd", "jest", "testing", "javascript", "nodejs"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/index.js"
+    ],
+    "coverageDirectory": "coverage",
+    "coverageReporters": ["text", "lcov", "html"]
+  }
+}
